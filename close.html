@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #0A1410; }
+    .slide-container { 
+      width: 1280px; min-height: 720px; 
+      background: #0A1410; 
+      display: flex; 
+      flex-direction: column;
+      justify-content: center;
+      padding: 48px;
+      position: relative;
+      color: #F0F5F2;
+      font-family: 'Manrope', sans-serif;
+    }
+    .motif { position: absolute; top: 48px; right: 48px; font-family: 'JetBrains Mono', monospace; color: #1E382C; font-size: 24px; }
+    .label { font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #CCFF00; margin-bottom: 24px; text-transform: uppercase; letter-spacing: 0.1em; }
+    .title { font-size: 56px; font-weight: 800; line-height: 1.1; letter-spacing: -0.04em; margin-bottom: 48px; max-width: 900px; }
+    .terminal-prompt {
+      border: 1px solid #1E382C;
+      background: #12211A;
+      padding: 32px;
+      font-family: 'JetBrains Mono', monospace;
+      width: fit-content;
+    }
+    .cursor { display: inline-block; width: 10px; height: 20px; background: #CCFF00; animation: blink 1s infinite; vertical-align: middle; }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+    .page-num { position: absolute; bottom: 48px; right: 48px; font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #8A9C92; }
+  </style>
+</head>
+<body>
+  <div class="slide-container">
+    <div class="motif">+</div>
+    <div class="label">Conclusion / Next Steps</div>
+    <h1 class="title">DepthWizard turns depth into a <span style="color: #CCFF00;">decision surface.</span></h1>
+    <div class="terminal-prompt">
+      <div style="color: #8A9C92;">$ depthwizard --version</div>
+      <div style="color: #F0F5F2;">0.9.4-DEMO</div>
+      <div style="color: #8A9C92; margin-top: 12px;">$ depthwizard --status</div>
+      <div style="color: #CCFF00;">READY FOR RECONSTRUCTION <span class="cursor"></span></div>
+    </div>
+    <div class="page-num">07</div>
+  </div>
+</body>
+</html>

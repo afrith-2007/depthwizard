@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #0A1410; }
+    .slide-container { 
+      width: 1280px; min-height: 720px; 
+      background: #0A1410; 
+      display: flex; 
+      flex-direction: column;
+      padding: 48px;
+      position: relative;
+      color: #F0F5F2;
+      font-family: 'Manrope', sans-serif;
+    }
+    .motif { position: absolute; top: 48px; right: 48px; font-family: 'JetBrains Mono', monospace; color: #1E382C; font-size: 24px; }
+    .header { padding-top: 48px; margin-bottom: 48px; }
+    .title { font-size: 32px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 8px; }
+    .label { font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #CCFF00; text-transform: uppercase; letter-spacing: 0.1em; }
+    .stack-container { flex: 1; display: flex; flex-direction: column; gap: 12px; }
+    .stack-layer {
+      border: 1px solid #1E382C;
+      background: #12211A;
+      padding: 20px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .layer-name { font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #CCFF00; }
+    .layer-tech { font-size: 18px; font-weight: 800; }
+    .layer-desc { font-size: 14px; color: #8A9C92; max-width: 400px; text-align: right; }
+    .fallback-box {
+      margin-top: 32px;
+      border: 1px dashed #FF6B00;
+      padding: 24px;
+      background: rgba(255, 107, 0, 0.05);
+    }
+    .fallback-title { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #FF6B00; margin-bottom: 8px; }
+    .fallback-text { font-size: 14px; color: #8A9C92; }
+    .page-num { position: absolute; bottom: 48px; right: 48px; font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #8A9C92; }
+  </style>
+</head>
+<body>
+  <div class="slide-container">
+    <div class="motif">+</div>
+    <div class="header">
+      <div class="label">Engineering / Resilience</div>
+      <h2 class="title">Built on the existing pipeline — made resilient</h2>
+    </div>
+    <div class="stack-container">
+      <div class="stack-layer">
+        <div class="layer-name">VIEWPORT</div>
+        <div class="layer-tech">Three.js + PLY</div>
+        <div class="layer-desc">Cinematic 3D rendering with custom camera and point-cloud shaders.</div>
+      </div>
+      <div class="stack-layer">
+        <div class="layer-name">GEOMETRY</div>
+        <div class="layer-tech">Open3D + NumPy</div>
+        <div class="layer-desc">Point cloud generation, voxel downsampling, and outlier removal.</div>
+      </div>
+      <div class="stack-layer">
+        <div class="layer-name">INFERENCE</div>
+        <div class="layer-tech">MiDaS (DPT) + PyTorch</div>
+        <div class="layer-desc">State-of-the-art single-view depth estimation models.</div>
+      </div>
+      <div class="stack-layer">
+        <div class="layer-name">BACKEND</div>
+        <div class="layer-tech">FastAPI + Uvicorn</div>
+        <div class="layer-desc">High-performance asynchronous API for image processing.</div>
+      </div>
+      <div class="fallback-box">
+        <div class="fallback-title">RESILIENCE STRATEGY: DEMO FALLBACK</div>
+        <p class="fallback-text">If the backend inference engine is unavailable, the frontend automatically switches to a procedural 3D corridor reconstruction to maintain a functional user experience.</p>
+      </div>
+    </div>
+    <div class="page-num">06</div>
+  </div>
+</body>
+</html>

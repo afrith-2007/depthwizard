@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #0A1410; }
+    .slide-container { 
+      width: 1280px; min-height: 720px; 
+      background: #0A1410; 
+      display: flex; 
+      flex-direction: column;
+      padding: 48px;
+      position: relative;
+      color: #F0F5F2;
+      font-family: 'Manrope', sans-serif;
+    }
+    .motif { position: absolute; top: 48px; right: 48px; font-family: 'JetBrains Mono', monospace; color: #1E382C; font-size: 24px; }
+    .header { padding-top: 48px; margin-bottom: 64px; }
+    .title { font-size: 32px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 8px; }
+    .label { font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #CCFF00; text-transform: uppercase; letter-spacing: 0.1em; }
+    .content-grid { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+    .comparison-box { border: 1px solid #1E382C; background: #12211A; padding: 32px; display: flex; flex-direction: column; }
+    .comp-label { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8A9C92; margin-bottom: 24px; }
+    .comp-title { font-size: 20px; font-weight: 800; margin-bottom: 16px; }
+    .comp-list { list-style: none; }
+    .comp-list li { font-size: 16px; color: #8A9C92; margin-bottom: 12px; display: flex; align-items: flex-start; gap: 12px; }
+    .comp-list li::before { content: "•"; color: #1E382C; }
+    .comp-list.new li::before { content: "→"; color: #CCFF00; }
+    .comp-list.new li { color: #F0F5F2; }
+    .page-num { position: absolute; bottom: 48px; right: 48px; font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #8A9C92; }
+  </style>
+</head>
+<body>
+  <div class="slide-container">
+    <div class="motif">+</div>
+    <div class="header">
+      <div class="label">Context / Evolution</div>
+      <h2 class="title">The prototype had the right engine — not the right workspace</h2>
+    </div>
+    <div class="content-grid">
+      <div class="comparison-box">
+        <div class="comp-label">V0.1 / GENERIC DEMO</div>
+        <h3 class="comp-title" style="color: #8A9C92;">Passive Observation</h3>
+        <ul class="comp-list">
+          <li>Generic purple gradient aesthetic</li>
+          <li>Static depth map display</li>
+          <li>Limited camera control (orbit only)</li>
+          <li>No scene diagnostics or confidence</li>
+          <li>Relative-only depth values</li>
+        </ul>
+      </div>
+      <div class="comparison-box" style="border-color: #CCFF00;">
+        <div class="comp-label" style="color: #CCFF00;">V0.9 / SPATIAL STUDIO</div>
+        <h3 class="comp-title">Active Reconstruction</h3>
+        <ul class="comp-list new">
+          <li>Dark geospatial workstation UI</li>
+          <li>Interactive 3D flythrough viewport</li>
+          <li>Cinematic camera & point-size controls</li>
+          <li>Live diagnostic & confidence readouts</li>
+          <li>Calibrated metric scale support</li>
+        </ul>
+      </div>
+    </div>
+    <div class="page-num">02</div>
+  </div>
+  <!-- Trigger fresh write event -->
+</body>
+</html>

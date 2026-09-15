@@ -1,0 +1,34 @@
+Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+Traceback (most recent call last):
+  File "/home/ubuntu/projects/depthwizard-b61638c4/app.py", line 167, in <module>
+    @app.post("/process")
+     ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/fastapi/routing.py", line 3004, in decorator
+    self.add_api_route(
+  File "/usr/local/lib/python3.12/dist-packages/fastapi/routing.py", line 2939, in add_api_route
+    route = route_class(
+            ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/fastapi/routing.py", line 1193, in __init__
+    _populate_api_route_state(
+  File "/usr/local/lib/python3.12/dist-packages/fastapi/routing.py", line 1061, in _populate_api_route_state
+    ) = _build_dependant_with_parameterless_dependencies(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/fastapi/routing.py", line 861, in _build_dependant_with_parameterless_dependencies
+    dependant = get_dependant(path=path, call=call, scope="function")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/fastapi/dependencies/utils.py", line 296, in get_dependant
+    param_details = analyze_param(
+                    ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/fastapi/dependencies/utils.py", line 523, in analyze_param
+    ensure_multipart_is_installed()
+  File "/usr/local/lib/python3.12/dist-packages/fastapi/dependencies/utils.py", line 129, in ensure_multipart_is_installed
+    raise RuntimeError(multipart_not_installed_error) from None
+RuntimeError: Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
